@@ -1,3 +1,14 @@
+:root {
+	--level-one: translateZ(3rem);
+	--level-two: translateZ(6rem);
+	--level-three: translateZ(9rem);
+	
+	--fw-normal: 400;
+	--fw-bold: 700;
+	
+	--clr: lightblue;
+}
+
 *{
 	padding: 0;
 	margin: 0;
@@ -82,13 +93,94 @@ h4{
 	letter-spacing: 2px;
 	font-size: 20px;
 }
+p {
+ font-size: 40px;
+ font-weight: 500;
+ color: violet;
 
-.about{
+}
+
+.card {
+	width: 400px;
+	box-shadow: 0 1rem 2rem rgba(0, 0, 0, .67);
+	float: right;
+
+ }
+  .card__content {
+	text-align: center;
+	position: relative;
+	padding: 10em 4em;
+	transition: transform 3s;
+	background: pink;
+	transform-style: preserve-3d;
+  }
+  
+  .card:hover .card__content {
+	transform: rotateY(.5turn);
+  }
+  .card__front,
+.card__back {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 5em 3em;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+  display: grid;
+  align-content: center;
+}
+.card__front {
+	background-image: url(./img/flower-g38fc77562_1920.jpg);
+	background-size: cover;
+	background-blend-mode: overlay;
+  }
+  .card__front::before {
+	content: '';
+	position: absolute;
+	--spacer: 1em;
+	top: var(--spacer);
+	bottom: var(--spacer);
+	left: var(--spacer);
+	right: var(--spacer);
+	border: 3px solid currentColor;
+	transform: var(--level-one);
+  }
+  .card-h1{
+    font-size: 1rem;
+    transform: var(--level-three);
+    order: 2;
+    text-transform: uppercase;
+}
+.card-par {
+    transform: var(--level-two);
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-size: .5rem;
+    font-weight: var(--fw-bold);
+    opacity: .7;
+}  
+.card__back {
+	transform: rotateY(.5turn);
+	color: var(black);
+	background: linear-gradient(to bottom right, darkred, lightblue);
+  }
+  
+main {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 400px;
+	
+}
+
+#about{
 	width: 100%;
 	padding: 100px 0px;
 	background-color: #000000;
 }
-.about img{
+#about img{
 	height: auto;
 	width: 430px;
 }
@@ -134,7 +226,7 @@ button:hover{
 	background: linear-gradient(to bottom right, red, yellow);
 }
 
-.service{
+#service{
 	background: #000000;
 	width: 100%;
 	padding: 100px 0px;
@@ -153,11 +245,10 @@ button:hover{
 	min-height: 400px;
 }
 .card{
-	height: 365px;
+	height: 335px;
 	width: 335px;
 	padding: 20px 35px;
-	background: #191919;
-	border-radius: 20px;
+	background: transparent;
 	margin: 15px;
 	position: relative;
 	overflow: hidden;
@@ -206,7 +297,7 @@ h5{
 	flex-direction: column;
 	justify-content: center;
 }
-.form  {
+#form  {
 	height: 100vh;
     background-color: #000000;
 	background-position: center;
@@ -252,6 +343,7 @@ h5{
 	border: 1px solid white;
 	width: 100%;
 	cursor: pointer;
+	margin-top: 15px;
   }
   input:focus~label {
 	top: -35px;
