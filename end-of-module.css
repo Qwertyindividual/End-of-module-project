@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
 * {
 	font-family: 'Courier New', Courier, monospace;
 }
@@ -50,22 +49,16 @@ body {
 .portfolio .card {
 	box-shadow: 15px 15px 40px rgba(0, 0, 0, 0.15);
 }
-.team .card {
+.testimonials .card {
 	box-shadow: 15px 15px 40px rgba(0, 0, 0, 0.15);
 }
-.services .card-body i {
+.skills .card-body i {
 	font-size: 50px;
 }
-.team .card-body i {
+.testimonials .card-body i {
 	font-size: 20px;
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
-	.carousel-caption {
-		bottom: 370px;
-	}
-	.carousel-caption p {
-		width: 100%;
-	}
 	.card {
 		margin-bottom: 30px;
 	}
@@ -258,13 +251,11 @@ input[type=text], select, textarea {
 	padding: 30px;
 	width: 400px;
 	box-shadow: 0 1rem 2rem rgba(0, 0, 0, .67);
-	
   }
   
   #form {
 	padding-left: 0px;
 	margin: auto;
-	/* float: right; */
   }
   
   #labels {
@@ -293,10 +284,4 @@ input[type=text], select, textarea {
 .social a:hover{
     transform: scale(1.3);
     transition: .3s;
-}
-.end{
-    position: absolute;
-    color:rgb(255, 0, 179);
-    bottom: 35px;
-    font-size: 14px;
 }
